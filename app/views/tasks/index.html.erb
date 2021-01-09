@@ -2,7 +2,8 @@
   <% @tasks.each do |task| %>
     <li>
       <%= task.completed ? '✅' : '🆘' %>
-      <%= link_to task.title, task %> <%= link_to "🚮", task, method: :delete %>
+      <%= link_to task.title, task %>
+      <%= link_to "🚮", task, method: :delete, data: {confirm: "SURE ?"} %>
     </li>
   <% end %>
 </ul>
