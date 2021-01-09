@@ -11,4 +11,10 @@ Rails.application.routes.draw do
   # view selected task details
   get 'tasks/:id', to: 'tasks#show', as: :task
 
+  # edit a task
+  get 'tasks/:id/edit', to: 'tasks#edit', as: :task_edit
+  patch 'tasks/:id', to: 'tasks#update'
+
+  # destroy task
+  delete 'tasks/:id', to: 'tasks#destroy'
 end
